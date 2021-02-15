@@ -1,0 +1,300 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>Base CSS Test Webpage</title>
+  <link rel="stylesheet" href="base.css">
+</head>
+<body>
+
+<header>
+<a href="#">WEBSITE TITLE</a>
+<nav>
+  <ul class="button-group">
+    <li><a href="#headings" class="button">Headings</a></li>
+    <li><a href="#inputs" class="button">Inputs</a></li>
+    <li><a href="#lists" class="button">Lists</a></li>
+    <li><a href="#tables" class="button">Tables</a></li>
+    <li><a href="#other" class="button">Other</a></li>
+  </ul>
+</nav>
+</header>
+
+
+<main>
+
+<div id="headings">
+  <h1>This is the H1 Heading</h1>
+  <h2>This is the H2 Heading</h2>
+  <h3>This is the H3 Heading</h3>
+  <h4>This is the H4 Heading</h4>
+  <h5>This is the H5 Heading</h5>
+  <h6>This is the H6 Heading</h6>
+</div>
+
+
+<br /><br /><br />
+
+
+<div id="inputs">
+  <h2>Inputs</h2>
+  <form>
+    <h3>TextFields</h3>
+    <label>
+      <span>Text</span>
+      <input type="text" placeholder="Placeholder Text">
+    </label>
+    <label>
+      <span>TextArea</span>
+      <textarea placeholder="Placeholder Text"></textarea>
+    </label>
+
+    <br /><br /><br />
+
+    <h3>Inputs</h3>
+    <label>
+      <span>Color</span>
+      <input type="color">
+    </label>
+    <label>
+      <span>Date</span>
+      <input type="date">
+    </label>
+    <label>
+      <span>DateTime-Local</span>
+      <input type="datetime-local">
+    </label>
+    <label>
+      <span>Email</span>
+      <input type="email">
+    </label>
+    <label>
+      <span>File</span>
+      <input type="file">
+    </label>
+    <label>
+      <span>Month</span>
+      <input type="month">
+    </label>
+    <label>
+      <span>Number</span>
+      <input type="number">
+    </label>
+    <label>
+      <span>Password</span>
+      <input type="password">
+    </label>
+    <label>
+      <span>Range</span>
+      <input type="range">
+    </label>
+    <label>
+      <span>Search</span>
+      <input type="search">
+    </label>
+    <label>
+      <span>Tel</span>
+      <input type="tel">
+    </label>
+    <label>
+      <span>Time</span>
+      <input type="time">
+    </label>
+    <label>
+      <span>URL</span>
+      <input type="url">
+    </label>
+    <label>
+      <span>Week</span>
+      <input type="week">
+    </label>
+
+    <br /><br /><br />
+
+    <label>
+      <span>Select</span>
+      <select id="select" name="select">
+        <optgroup label="optgroup">
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+        </optgroup>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+      </select>
+    </label>
+
+    <br /><br /><br />
+
+    <label class="horizontal">
+      <input type="checkbox">
+      <span>Checkbox</span>
+    </label>
+    <fieldset>
+      <legend>Radio Group</legend>
+      <label class="horizontal">
+        <input type="radio" name="radio" value="1" />
+        <span>Radio Button 1</span>
+      </label>
+      <label class="horizontal">
+        <input type="radio" name="radio" value="2" />
+        <span>Radio Button 2</span>
+      </label>
+      <label class="horizontal">
+        <input type="radio" name="radio" value="3" />
+        <span>Radio Button 3</span>
+      </label>
+    </fieldset>
+
+    <br /><br /><br />
+
+    <h3>Buttons</h3>
+    <input type="reset" value="Reset">
+    <input type="submit" value="Submit">
+    <input type="button" value="Input Button">
+    <input type="button" value="Primary Input Button" class="primary">
+    <button>Button</button>
+    <button class="primary">Primary Button</button>
+
+    <br /><br /><br />
+
+    <h3>.button-group</h3>
+    <div class="button-group">
+      <button>Button 1</button>
+      <button>Button 2</button>
+      <button class="primary">Button 3</button>
+    </div>
+
+  </form>
+</div>
+
+
+<br /><br /><br />
+
+
+<div id="lists">
+  <h2>Lists</h2>
+  <ol>
+    <li>Unordered list item
+      <ol>
+        <li>Unordered list item
+          <ol>
+            <li>Unordered list item
+              <ul>
+                <li>Unordered list item</li>
+                <li>Unordered list item</li>
+                <li>Unordered list item</li>
+              </ul>
+            </li>
+            <li>Unordered list item</li>
+            <li>Unordered list item</li>
+          </ol>
+        </li>
+        <li>Unordered list item</li>
+        <li>Unordered list item</li>
+      </ol>
+    </li>
+    <li>Unordered list item</li>
+    <li>Unordered list item</li>
+  </ol>
+
+
+  <br /><br /><br />
+
+
+  <ul>
+    <li>Unordered list item
+      <ul>
+        <li>Unordered list item
+          <ul>
+            <li>Unordered list item
+              <ol>
+                <li>Unordered list item</li>
+                <li>Unordered list item</li>
+                <li>Unordered list item</li>
+              </ol>
+            </li>
+            <li>Unordered list item</li>
+            <li>Unordered list item</li>
+          </ul>
+        </li>
+        <li>Unordered list item</li>
+        <li>Unordered list item</li>
+      </ul>
+    </li>
+    <li>Unordered list item</li>
+    <li>Unordered list item</li>
+  </ul>
+</div>
+
+
+<br /><br /><br />
+
+
+<div id="tables">
+  <h2>Tables</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Table Heading</th>
+        <th>Table Heading</th>
+        <th>Table Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Table Cell</td>
+        <td>Table Cell</td>
+        <td>Table Cell</td>
+      </tr>
+      <tr>
+        <td>Table Cell</td>
+        <td>Table Cell</td>
+        <td>Table Cell</td>
+      </tr>
+      <tr>
+        <td>Table Cell</td>
+        <td>Table Cell</td>
+        <td>Table Cell</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<br /><br /><br />
+
+
+<div id="other">
+
+  <a href="#">This is a link</a>
+
+  <br /><br /><br />
+
+  <p>This is paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vestibulum laoreet porta. Suspendisse volutpat nec enim eget dignissim. Etiam molestie lectus mauris, sit amet scelerisque lacus ornare nec. Ut ut sem vitae massa consectetur convallis vitae eu augue. Donec tempus a urna non laoreet.</p>
+
+  <br /><br /><br />
+
+  <span>Horizontal Rule</span>
+  <hr/>
+
+  <br /><br /><br />
+
+</div>
+
+</main>
+
+
+<footer>
+  <p>Thank you for visiting <a href="#">Website</a>.</p>
+  <nav>
+    <ul>
+      <li><a href="#headings">Headings</a></li>
+      <li><a href="#inputs">Inputs</a></li>
+      <li><a href="#lists">Lists</a></li>
+      <li><a href="#tables">Tables</a></li>
+      <li><a href="#other">Other</a></li>
+    </ul>
+  </nav>
+</footer>
+
+</body>
+</html>

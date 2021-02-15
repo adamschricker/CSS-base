@@ -1,0 +1,356 @@
+/***************/
+/** VARIABLES **/
+/***************/
+:root {
+  --color-accent: orange;
+  --color-border: #aaa;
+  --color-table-header-background: #99f;
+  --color-text: #333;
+  --color-webpage-background: #eee;
+
+  --font-family: Arial, Helvetica, sans-serif;
+
+  --webpage-max-width: 1024px;
+}
+
+
+/***********/
+/** RESET **/
+/***********/
+* {
+  border: none;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-size: 100%;
+  letter-spacing: 0.1rem;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  word-wrap: break-word;
+}
+
+
+/************************/
+/** LAYOUT / STRUCTURE **/
+/************************/
+html, body {
+  background-color: var(--color-webpage-background);
+  color: var(--color-text);
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: var(--webpage-max-width);
+}
+
+
+/************/
+/** HEADER **/
+/************/
+header {
+  align-items: center;
+  border-bottom: thin solid var(--color-border);
+  display: flex;
+  flex: 0;
+  padding: 1rem;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header > a:first-child {
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
+header > nav {
+  flex: 1;
+}
+
+header > nav > ul {
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+}
+
+header > nav > ul > li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header > nav > ul > li > a {
+  list-style: none;
+}
+
+
+/**********/
+/** MAIN **/
+/**********/
+main {
+  flex: 1;
+  padding: 1rem;
+}
+
+
+/************/
+/** FOOTER **/
+/************/
+footer {
+  border-top: thin solid var(--color-border);
+  flex: 0;
+  font-size: 0.75rem;
+  padding: 1rem;
+}
+
+
+
+/**************/
+/** HEADINGS **/
+/**************/
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1.1rem; }
+
+
+/************/
+/** INPUTS **/
+/************/
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset {
+  border: thin solid var(--color-border);
+  border-radius: 0.5rem;
+  padding: 1rem 1rem 0;
+}
+
+label {
+  cursor: pointer;
+  display: block;
+  padding-bottom: 1rem;
+}
+
+label > span {
+  padding-left: 0.25rem;
+}
+
+label.horizontal {
+  align-items: center;
+  display: flex;
+}
+
+label.horizontal > span {
+  padding-left: 0;
+}
+
+input,
+select,
+textarea {
+  border: 2px solid var(--color-border);
+  border-radius: 0.5rem;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+textarea {
+  height: 8rem;
+}
+
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="file"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select,
+textarea {
+  background-color: white;
+  color: var(--color-text);
+  display: block;
+  width: 100%;
+}
+
+input[type="color"] {
+  cursor: pointer;
+  height: 2rem;
+  padding: 1px 4px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--color-accent);
+  box-shadow:
+    0
+    0
+    0.25rem
+    0.10rem
+    var(--color-accent);
+}
+
+input[type='checkbox'] {
+  cursor: pointer;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  width: 1.25rem;
+}
+
+input[type='radio'] {
+  cursor: pointer;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  width: 1.25rem;
+}
+
+button,
+.button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  border: thin solid var(--color-border);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.5s ease;
+}
+
+button.primary,
+.button.primary,
+input[type='button'].primary,
+input[type='submit'] {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+button:disabled {
+  filter: grayscale(50%);
+}
+
+button:hover,
+.button:hover,
+input[type='button']:hover,
+input[type='reset']:hover,
+input[type='submit']:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 1rem 0 var(--color-accent) inset;
+  text-shadow: 0 0 0.25rem var(--color-accent);
+}
+
+button.primary:hover,
+.button.primary:hover,
+input[type='button'].primary:hover,
+input[type='submit']:hover {
+  border-color: white;
+  box-shadow: 0 0 1rem 0 white inset;
+  text-shadow: 0 0 0.25rem white;
+}
+
+.button-group {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-group button,
+.button-group .button,
+.button-group input[type='button'],
+.button-group input[type='reset'],
+.button-group input[type='submit'] {
+  margin-left: 1rem;
+}
+
+
+/***********/
+/** LISTS **/
+/***********/
+ol { margin: 0 0 1rem 2rem; }
+ol li { margin: 0 0 0.5rem 0; }
+ol ol { margin: 0.5rem 0 0 1.5rem; }
+ol ul { margin: 0.5rem 0 0 1.25rem; }
+
+ul { margin: 0 0 1rem 2rem; }
+ul li { margin: 0 0 0.5rem 0; }
+ul ol { margin: 0.5rem 0 0 1.5rem; }
+ul ul { margin: 0.5rem 0 0 1.25rem; }
+
+
+/************/
+/** TABLES **/
+/************/
+table {
+  background-color: var(--color-border);
+  border-spacing: medium;
+  width: 100%;
+}
+
+table thead tr th {
+  color: white;
+  padding: 0.5rem;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+table tbody tr td {
+  background-color: var(--color-webpage-background);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+
+/***********/
+/** LINKS **/
+/***********/
+a {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+a:hover {
+  text-shadow: 0 0 1rem var(--color-accent);
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+hr {
+  border: thin solid var(--color-border);
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.hide {
+  display: none;
+}

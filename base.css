@@ -4,9 +4,11 @@
 :root {
   --color-accent: orange;
   --color-border: #aaa;
-  --color-table-header-background: #99f;
+
+  --color-table-stripe: #eee;
+
   --color-text: #333;
-  --color-webpage-background: #eee;
+  --color-webpage-background: #f6f6f6;
 
   --font-family: Arial, Helvetica, sans-serif;
 
@@ -232,6 +234,7 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
+  background-color: var(--color-website-background);
   border: thin solid var(--color-border);
   border-radius: 0.5rem;
   cursor: pointer;
@@ -247,10 +250,6 @@ input[type='button'].primary,
 input[type='submit'] {
   background-color: var(--color-accent);
   border-color: var(--color-accent);
-}
-
-button:disabled {
-  filter: grayscale(50%);
 }
 
 button:hover,
@@ -272,17 +271,21 @@ input[type='submit']:hover {
   text-shadow: 0 0 0.25rem white;
 }
 
+button:disabled,
+button:disabled:hover {
+  cursor: not-allowed;
+  filter: grayscale(50%);
+  box-shadow: none;
+  text-shadow: none;
+}
+
 .button-group {
   align-items: center;
   display: flex;
   justify-content: flex-end;
 }
 
-.button-group button,
-.button-group .button,
-.button-group input[type='button'],
-.button-group input[type='reset'],
-.button-group input[type='submit'] {
+.button-group > * {
   margin-left: 1rem;
 }
 
@@ -305,22 +308,25 @@ ul ul { margin: 0.5rem 0 0 1.25rem; }
 /** TABLES **/
 /************/
 table {
-  background-color: var(--color-border);
-  border-spacing: medium;
+  border: thin solid var(--color-table-stripe);
+  border-collapse: collapse;
   width: 100%;
 }
 
 table thead tr th {
-  color: white;
+  background-color: var(--color-table-stripe);
   padding: 0.5rem;
   text-align: left;
   text-transform: uppercase;
 }
 
 table tbody tr td {
-  background-color: var(--color-webpage-background);
   padding: 0.5rem;
   text-align: left;
+}
+
+table tbody tr:nth-child(even) td {
+  background-color: var(--color-table-stripe);
 }
 
 

@@ -245,7 +245,6 @@ input[type='submit'] {
   border: thin solid var(--color-border);
   border-radius: 0.5rem;
   cursor: pointer;
-  display: block;
   font-size: 1.25rem;
   margin: 0 0 1rem;
   padding: 0.5rem 1rem;
